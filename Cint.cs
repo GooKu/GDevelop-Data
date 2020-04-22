@@ -62,13 +62,13 @@
 
         public override int Clamp(int value)
         {
-            if (value > Max || value < Min)
+            if (value > Max)
             {
                 value = Max;
             }
             else if (value < Min)
             {
-                value = Max;
+                value = Min;
             }
             return value;
         }
