@@ -28,6 +28,36 @@
             return cint;
         }
 
+        public static bool operator >(Cint cint, int value)
+        {
+            return cint.Value > value;
+        }
+
+        public static bool operator >=(Cint cint, int value)
+        {
+            return cint.Value >= value;
+        }
+
+        public static bool operator <(Cint cint, int value)
+        {
+            return cint.Value < value;
+        }
+
+        public static bool operator <=(Cint cint, int value)
+        {
+            return cint.Value <= value;
+        }
+
+        public static bool operator ==(Cint cint, int value)
+        {
+            return cint.Value == value;
+        }
+
+        public static bool operator !=(Cint cint, int value)
+        {
+            return cint.Value != value;
+        }
+
         public static implicit operator int(Cint cint) => cint.Value;
 
         public override int Clamp(int value)

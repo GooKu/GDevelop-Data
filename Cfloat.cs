@@ -34,6 +34,36 @@
             return cfloat;
         }
 
+        public static bool operator >(Cfloat cfloat, int value)
+        {
+            return cfloat.Value > value;
+        }
+
+        public static bool operator >=(Cfloat cfloat, int value)
+        {
+            return cfloat.Value >= value;
+        }
+
+        public static bool operator <(Cfloat cfloat, int value)
+        {
+            return cfloat.Value < value;
+        }
+
+        public static bool operator <=(Cfloat cfloat, int value)
+        {
+            return cfloat.Value <= value;
+        }
+
+        public static bool operator ==(Cfloat cfloat, int value)
+        {
+            return cfloat.Value == value;
+        }
+
+        public static bool operator !=(Cfloat cfloat, int value)
+        {
+            return cfloat.Value != value;
+        }
+
         public static implicit operator float(Cfloat cfloat) => cfloat.Value;
 
         public override float Clamp(float value)
