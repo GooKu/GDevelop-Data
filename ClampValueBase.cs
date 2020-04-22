@@ -14,15 +14,16 @@
 
         public ClampValueBase(T value, T max, T min)
         {
-            Value = value;
             Max = max;
             Min = min;
+            Value = value;
         }
 
         public ClampValueBase(T max, T min)
         {
-            Value = Max = max;
+            Max = max;
             Min = min;
+            Value = max;
         }
 
         public virtual void UpdateClamp(T max, T min)
