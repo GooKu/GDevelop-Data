@@ -1,6 +1,6 @@
 ﻿namespace GDevelop.Data
 {
-    class Cfloat : ClampValueBase<float>
+    public class Cfloat : ClampValueBase<float>
     {
         public Cfloat(float max, float min) : base(max, min)
         {
@@ -16,50 +16,50 @@
             return cfloat;
         }
 
-        public static Cfloat operator -(Cfloat cfloat, int value)
+        public static Cfloat operator -(Cfloat cfloat, float value)
         {
             cfloat.Value -= value;
             return cfloat;
         }
 
-        public static Cfloat operator *(Cfloat cfloat, int value)
+        public static Cfloat operator *(Cfloat cfloat, float value)
         {
             cfloat.Value *= value;
             return cfloat;
         }
 
-        public static Cfloat operator /(Cfloat cfloat, int value)
+        public static Cfloat operator /(Cfloat cfloat, float value)
         {
             cfloat.Value /= value;
             return cfloat;
         }
 
-        public static bool operator >(Cfloat cfloat, int value)
+        public static bool operator >(Cfloat cfloat, float value)
         {
             return cfloat.Value > value;
         }
 
-        public static bool operator >=(Cfloat cfloat, int value)
+        public static bool operator >=(Cfloat cfloat, float value)
         {
             return cfloat.Value >= value;
         }
 
-        public static bool operator <(Cfloat cfloat, int value)
+        public static bool operator <(Cfloat cfloat, float value)
         {
             return cfloat.Value < value;
         }
 
-        public static bool operator <=(Cfloat cfloat, int value)
+        public static bool operator <=(Cfloat cfloat, float value)
         {
             return cfloat.Value <= value;
         }
 
-        public static bool operator ==(Cfloat cfloat, int value)
+        public static bool operator ==(Cfloat cfloat, float value)
         {
             return cfloat.Value == value;
         }
 
-        public static bool operator !=(Cfloat cfloat, int value)
+        public static bool operator !=(Cfloat cfloat, float value)
         {
             return cfloat.Value != value;
         }
