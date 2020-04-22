@@ -4,14 +4,13 @@
     {
         public T Value
         {
-            get => Value;
-            protected set
-            {
-                value = Clamp(value);
-            }
+            get => this.value;
+            set => this.value = Clamp(value);
         }
         public T Max { get; protected set; }
         public T Min { get; protected set; }
+
+        protected T value;
 
         public ClampValueBase(T value, T max, T min)
         {
@@ -34,5 +33,10 @@
         }
 
         public abstract T Clamp(T value);
+
+        public override string ToString()
+        {
+            return $"Max:{Max}, Min:{Min}, Value = {Value}";
+        }
     }
 }
