@@ -2,6 +2,10 @@
 {
     public class Cint : ClampValueBase<int>
     {
+        public Cint(int max) : base(max, 0)
+        {
+        }
+
         public Cint(int max, int min) : base(max, min)
         {
         }
@@ -59,6 +63,7 @@
         }
 
         public static implicit operator int(Cint cint) => cint.Value;
+        public static explicit operator Cint(int value) =>  new Cint(value);
 
         public override int Clamp(int value)
         {

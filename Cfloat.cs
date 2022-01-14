@@ -2,6 +2,10 @@
 {
     public class Cfloat : ClampValueBase<float>
     {
+        public Cfloat(float max) : base(max, 0)
+        {
+        }
+
         public Cfloat(float max, float min) : base(max, min)
         {
         }
@@ -65,6 +69,7 @@
         }
 
         public static implicit operator float(Cfloat cfloat) => cfloat.Value;
+        public static explicit operator Cfloat(float value) => new Cfloat(value);
 
         public override float Clamp(float value)
         {
