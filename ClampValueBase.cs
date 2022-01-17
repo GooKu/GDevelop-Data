@@ -33,6 +33,18 @@
             Value = Value;
         }
 
+        public void UpdateMax(T max)
+        {
+            Max = max;
+            Value = Value;
+        }
+
+        public void UpdateMin(T min)
+        {
+            Min = min;
+            Value = Value;
+        }
+
         public abstract T Clamp(T value);
 
         public override string ToString()
